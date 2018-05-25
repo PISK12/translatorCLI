@@ -2,6 +2,5 @@
 *.exe
 __pycache__/
 venvWindows/
-*.txt
 *.bat
 *.csv
