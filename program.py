@@ -38,13 +38,13 @@ def make_dict(name="dictionary.csv"):
     if name in listdir(getcwd()):
         pass
     else:
-        with open(name, "w") as f:
+        with open(name, "w",encoding = "utf8") as f:
             pass
 
 
 def read_dict(name="dictionary.csv"):
     dictionary = {}
-    with open(name, "r") as f:
+    with open(name, "r",encoding = "utf8") as f:
         for text in f:
             if text:
                 listText = text.split("=")
@@ -57,7 +57,7 @@ def add_word(eng, pl, name="dictionary.csv"):
     eng = eng.strip()
     pl = pl.strip()
     if eng and pl:
-        with open(name, "a") as f:
+        with open(name, "a",encoding = "utf8") as f:
             try:
                 f.write("{};{}\n".format(eng, pl))
             except Exception as e:
